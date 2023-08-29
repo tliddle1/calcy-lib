@@ -1,143 +1,231 @@
 package calcy
 
-import "testing"
+import (
+	"errors"
+	"fmt"
+	"testing"
+)
 
-func TestAdditionSuccess(t *testing.T) {
-	result := Addition{}.Calculate(5, 4)
-	if result != 9 {
-		t.Error("want 9, got", result)
+func TestAddition(t *testing.T) {
+	t.Parallel()
+	tests := map[string]struct {
+		a        int
+		b        int
+		expected int
+	}{
+		"10+5": {
+			a:        10,
+			b:        5,
+			expected: 15,
+		},
+		"(-2)+(-4)": {
+			a:        -2,
+			b:        -4,
+			expected: -6,
+		},
+		"5+(-4)": {
+			a:        5,
+			b:        -4,
+			expected: 1,
+		},
+		"1000000000+1000000000": {
+			a:        1000000000,
+			b:        1000000000,
+			expected: 2000000000,
+		},
 	}
-}
 
-func TestAdditionNegativeParameter(t *testing.T) {
-	result := Addition{}.Calculate(5, -4)
-	if result != 1 {
-		t.Error("want 1, got", result)
-	}
-}
-
-func TestAdditionNegativeResult(t *testing.T) {
-	result := Addition{}.Calculate(-2, -4)
-	if result != -6 {
-		t.Error("want -6, got", result)
-	}
-}
-
-func TestAdditionLargeNumbers(t *testing.T) {
-	result := Addition{}.Calculate(1000000000, 1000000000)
-	if result != 2000000000 {
-		t.Error("want 2000000000, got", result)
+	for name, test := range tests {
+		t.Run(name, func(t *testing.T) {
+			actual, err := Addition{}.Calculate(test.a, test.b)
+			if err != nil {
+				t.Error(err)
+			}
+			if actual != test.expected {
+				t.Errorf("sums don't match: expected %v, got %v", test.expected, actual)
+			}
+		})
 	}
 }
 
 func TestSubtraction(t *testing.T) {
-	result := Subtraction{}.Calculate(5, 4)
-	if result != 1 {
-		t.Error("want 1, got", result)
+	t.Parallel()
+	tests := map[string]struct {
+		a        int
+		b        int
+		expected int
+	}{
+		"10-6": {
+			a:        10,
+			b:        6,
+			expected: 4,
+		},
+		"(-2)-(-4)": {
+			a:        -2,
+			b:        -4,
+			expected: 2,
+		},
+		"5-(-4)": {
+			a:        5,
+			b:        -4,
+			expected: 9,
+		},
+		"1000000000-2000000000": {
+			a:        1000000000,
+			b:        2000000000,
+			expected: -1000000000,
+		},
 	}
-}
 
-func TestSubtractionNegativeParameter(t *testing.T) {
-	result := Subtraction{}.Calculate(5, -4)
-	if result != 9 {
-		t.Error("want 9, got", result)
-	}
-}
-
-func TestSubtractionNegativeResult(t *testing.T) {
-	result := Subtraction{}.Calculate(-2, 4)
-	if result != -6 {
-		t.Error("want -6, got", result)
-	}
-}
-
-func TestSubtractionLargeNumbers(t *testing.T) {
-	result := Subtraction{}.Calculate(2000000000, 1000000000)
-	if result != 1000000000 {
-		t.Error("want 1000000000, got", result)
+	for name, test := range tests {
+		t.Run(name, func(t *testing.T) {
+			actual, err := Subtraction{}.Calculate(test.a, test.b)
+			if err != nil {
+				t.Error(err)
+			}
+			if actual != test.expected {
+				t.Errorf("results don't match: expected %v, got %v", test.expected, actual)
+			}
+		})
 	}
 }
 
 func TestMultiplication(t *testing.T) {
-	result := Multiplication{}.Calculate(4, 5)
-	if result != 20 {
-		t.Error("want 20, got", result)
+	t.Parallel()
+	tests := map[string]struct {
+		a        int
+		b        int
+		expected int
+	}{
+		"5*4": {
+			a:        5,
+			b:        4,
+			expected: 20,
+		},
+		"(-5)*(-4)": {
+			a:        -5,
+			b:        -4,
+			expected: 20,
+		},
+		"(-2)*4": {
+			a:        -2,
+			b:        4,
+			expected: -8,
+		},
+		"100000*100000": {
+			a:        100000,
+			b:        100000,
+			expected: 10000000000,
+		},
 	}
-}
 
-func TestMultiplicationNegativeParameter(t *testing.T) {
-	result := Multiplication{}.Calculate(-5, -4)
-	if result != 20 {
-		t.Error("want 20, got", result)
-	}
-}
-
-func TestMultiplicationNegativeResult(t *testing.T) {
-	result := Multiplication{}.Calculate(-2, 4)
-	if result != -8 {
-		t.Error("want -8, got", result)
-	}
-}
-
-func TestMultiplicationLargeNumbers(t *testing.T) {
-	result := Multiplication{}.Calculate(100000, 100000)
-	if result != 10000000000 {
-		t.Error("want 10000000000, got", result)
+	for name, test := range tests {
+		t.Run(name, func(t *testing.T) {
+			actual, err := Multiplication{}.Calculate(test.a, test.b)
+			if err != nil {
+				t.Error(err)
+			}
+			if actual != test.expected {
+				t.Errorf("products don't match: expected %v, got %v", test.expected, actual)
+			}
+		})
 	}
 }
 
 func TestDivision(t *testing.T) {
-	result := Division{}.Calculate(4, 5)
-	if result != 0 {
-		t.Error("want 0, got", result)
+	t.Parallel()
+	tests := map[string]struct {
+		a        int
+		b        int
+		expected int
+	}{
+		"5/4": {
+			a:        5,
+			b:        4,
+			expected: 1,
+		},
+		"(-10)/(-2)": {
+			a:        -10,
+			b:        -2,
+			expected: 5,
+		},
+		"4/(-2)": {
+			a:        4,
+			b:        -2,
+			expected: -2,
+		},
+		"1000000000/1000000000": {
+			a:        1000000000,
+			b:        1000000000,
+			expected: 1,
+		},
+	}
+
+	for name, test := range tests {
+		t.Run(name, func(t *testing.T) {
+			actual, err := Division{}.Calculate(test.a, test.b)
+			if err != nil {
+				t.Error(err)
+			}
+			if actual != test.expected {
+				t.Errorf("quotients don't match: expected %v, got %v", test.expected, actual)
+			}
+		})
 	}
 }
 
-func TestDivisionNegativeParameter(t *testing.T) {
-	result := Division{}.Calculate(-10, -2)
-	if result != 5 {
-		t.Error("want 5, got", result)
+func TestDivisionByZero(t *testing.T) {
+	t.Parallel()
+	actual, err := Division{}.Calculate(34, 0)
+	if !errors.Is(err, ErrDivideByZero) {
+		t.Errorf("expected divide by zero error but got %v", err)
 	}
-}
-
-func TestDivisionNegativeResult(t *testing.T) {
-	result := Division{}.Calculate(4, -2)
-	if result != -2 {
-		t.Error("want -2, got", result)
-	}
-}
-
-func TestDivisionLargeNumbers(t *testing.T) {
-	result := Division{}.Calculate(1000000000, 1000000000)
-	if result != 1 {
-		t.Error("want 1, got", result)
-	}
+	fmt.Println(actual)
 }
 
 func TestBogus(t *testing.T) {
-	result := Bogus{Offset: 42}.Calculate(4, 5)
-	if result != 42+9 {
-		t.Error("want 51, got", result)
+	t.Parallel()
+	tests := map[string]struct {
+		a        int
+		b        int
+		offset   int
+		expected int
+	}{
+		"5/4": {
+			a:        5,
+			b:        4,
+			offset:   42,
+			expected: 51,
+		},
+		"(-10)/(-2)": {
+			a:        -10,
+			b:        -2,
+			offset:   -31,
+			expected: -43,
+		},
+		"4/(-2)": {
+			a:        4,
+			b:        -2,
+			offset:   52,
+			expected: 54,
+		},
+		"1000000000/1000000000": {
+			a:        1000000000,
+			b:        1000000000,
+			offset:   1,
+			expected: 2000000001,
+		},
 	}
-}
 
-func TestBogusNegativeParameter(t *testing.T) {
-	result := Bogus{Offset: -42}.Calculate(65, -4)
-	if result != 19 {
-		t.Error("want 19, got", result)
-	}
-}
-
-func TestBogusNegativeResult(t *testing.T) {
-	result := Bogus{Offset: -2}.Calculate(-2, -4)
-	if result != -8 {
-		t.Error("want -8, got", result)
-	}
-}
-
-func TestBogusLargeNumbers(t *testing.T) {
-	result := Bogus{Offset: 1000000000}.Calculate(1000000000, 1000000000)
-	if result != 3000000000 {
-		t.Error("want 2000000000, got", result)
+	for name, test := range tests {
+		t.Run(name, func(t *testing.T) {
+			actual, err := Bogus{Offset: test.offset}.Calculate(test.a, test.b)
+			if err != nil {
+				t.Error(err)
+			}
+			if actual != test.expected {
+				t.Errorf("results don't match: expected %v, got %v", test.expected, actual)
+			}
+		})
 	}
 }

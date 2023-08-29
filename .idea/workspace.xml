@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="ALL" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="1c58d601-2ad4-400b-8c57-560ce8850e44" name="Changes" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Go File" />
+      </list>
+    </option>
+  </component>
+  <component name="GOROOT" url="file:///opt/homebrew/opt/go/libexec" />
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "history": [
+    {
+      "state": "OPEN"
+    }
+  ],
+  "lastFilter": {
+    "state": "OPEN"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="2c197815-8430-4d83-abdc-3fc116de9300" />
+        <option name="url" value="https://github.com/mdwhatcott/calcy-lib.git" />
+      </UrlAndAccount>
+    </option>
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 5
+}</component>
+  <component name="ProjectId" id="2UcV1Sr78sUJOBf9mNTfzdKNFnz" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "DefaultGoTemplateProperty": "Go File",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.go.formatter.settings.were.checked": "true",
+    "RunOnceActivity.go.migrated.go.modules.settings": "true",
+    "RunOnceActivity.go.modules.go.list.on.any.changes.was.set": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "main",
+    "go.import.settings.migrated": "true",
+    "go.sdk.automatically.set": "true",
+    "last_opened_file_path": "/Users/thomas",
+    "node.js.detected.package.eslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.lookFeel"
+  }
+}]]></component>
+  <component name="RunManager" selected="Go Test.go test smarty/calcy-lib/calcy">
+    <configuration name="go build github.com/tliddle1/calcy-lib/main" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+      <module name="calcy-lib" />
+      <working_directory value="$PROJECT_DIR$" />
+      <kind value="PACKAGE" />
+      <package value="github.com/tliddle1/calcy-lib/main" />
+      <directory value="$PROJECT_DIR$" />
+      <filePath value="$PROJECT_DIR$/main/main.go" />
+      <method v="2" />
+    </configuration>
+    <configuration name="TestAdditionSuccess in smarty/calcy-lib/calcy" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+      <module name="calcy-lib" />
+      <working_directory value="$PROJECT_DIR$/calcy" />
+      <root_directory value="$PROJECT_DIR$" />
+      <kind value="PACKAGE" />
+      <package value="smarty/calcy-lib/calcy" />
+      <directory value="$PROJECT_DIR$" />
+      <filePath value="$PROJECT_DIR$" />
+      <framework value="gotest" />
+      <pattern value="^\QTestAdditionSuccess\E$" />
+      <method v="2" />
+    </configuration>
+    <configuration name="go test github.com/mdwhatcott/calcy-lib/calcy" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+      <module name="calcy-lib" />
+      <working_directory value="$PROJECT_DIR$/calcy" />
+      <root_directory value="$PROJECT_DIR$" />
+      <kind value="PACKAGE" />
+      <package value="github.com/mdwhatcott/calcy-lib/calcy" />
+      <directory value="$PROJECT_DIR$" />
+      <filePath value="$PROJECT_DIR$" />
+      <framework value="gotest" />
+      <method v="2" />
+    </configuration>
+    <configuration name="go test github.com/tliddle1/calcy-lib/handler" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true">
+      <module name="calcy-lib" />
+      <working_directory value="$PROJECT_DIR$/calcy" />
+      <root_directory value="$PROJECT_DIR$" />
+      <kind value="PACKAGE" />
+      <package value="github.com/mdwhatcott/calcy-lib/calcy" />
+      <directory value="$PROJECT_DIR$" />
+      <filePath value="$PROJECT_DIR$" />
+      <framework value="gotest" />
+      <method v="2" />
+    </configuration>
+    <configuration name="go test smarty/calcy-lib/calcy" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+      <module name="calcy-lib" />
+      <working_directory value="$PROJECT_DIR$/calcy" />
+      <kind value="PACKAGE" />
+      <package value="smarty/calcy-lib/calcy" />
+      <directory value="$PROJECT_DIR$" />
+      <filePath value="$PROJECT_DIR$" />
+      <framework value="gotest" />
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Go Build.go build github.com/tliddle1/calcy-lib/main" />
+      <item itemvalue="Go Test.TestAdditionSuccess in smarty/calcy-lib/calcy" />
+      <item itemvalue="Go Test.go test github.com/mdwhatcott/calcy-lib/calcy" />
+      <item itemvalue="Go Test.go test github.com/tliddle1/calcy-lib/handler" />
+      <item itemvalue="Go Test.go test smarty/calcy-lib/calcy" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Go Test.go test smarty/calcy-lib/calcy" />
+        <item itemvalue="Go Test.TestAdditionSuccess in smarty/calcy-lib/calcy" />
+        <item itemvalue="Go Test.go test github.com/tliddle1/calcy-lib/handler" />
+        <item itemvalue="Go Build.go build github.com/tliddle1/calcy-lib/main" />
+        <item itemvalue="Go Test.go test github.com/mdwhatcott/calcy-lib/calcy" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="UnknownFeatures">
+    <option featureType="dependencySupport" implementationName="executable:docker" />
+    <option featureType="dependencySupport" implementationName="executable:kubectl" />
+  </component>
+  <component name="VgoProject">
+    <settings-migrated>true</settings-migrated>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/calcy_lib$go_test_smarty_calcy_lib_calcy.out" NAME="go test smarty/calcy-lib/calcy Coverage Results" MODIFIED="1693347661034" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="GoCoverage" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/calcy_lib$TestHandler_in_github_com_mdwhatcott_calcy_lib_handler.out" NAME="TestHandler in github.com/mdwhatcott/calcy-lib/handler Coverage Results" MODIFIED="1693259144047" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="GoCoverage" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/calcy_lib$go_test_github_com_mdwhatcott_calcy_lib_calcy.out" NAME="go test github.com/mdwhatcott/calcy-lib/calcy Coverage Results" MODIFIED="1693324569817" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="GoCoverage" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/calcy_lib$go_test_github_com_mdwhatcott_calcy_lib_handler.out" NAME="go test github.com/mdwhatcott/calcy-lib/handler Coverage Results" MODIFIED="1693324576390" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="GoCoverage" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+  </component>
+</project>
